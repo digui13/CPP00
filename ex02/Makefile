@@ -5,7 +5,7 @@
 #	MAKEFLAGS += --silent
 
 #NAME
-NAME						=	phonebook
+NAME						=	account
 
 # Compiler
 Compile						=	g++ -Wall -Wextra -Werror -fsanitize=address -std=c++98
@@ -44,9 +44,8 @@ OBJS						=	$(SOURCE:.cpp=.o)
 
 LIB_FILE					=	libft.a
 
-SOURCE						=	src/PhoneBook.cpp \
-								src/Contact.cpp	\
-								src/main.cpp
+SOURCE						=	Account.cpp \
+								tests.cpp
 
 
 #################################################################################################

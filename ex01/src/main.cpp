@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpestana <dpestana@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/13 11:51:40 by dpestana          #+#    #+#             */
+/*   Updated: 2023/04/13 11:51:40 by dpestana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/PhoneBook.hpp"
 
 int	main(void)
@@ -10,7 +22,7 @@ int	main(void)
 	c.setIndex();
 	while (1)
 	{
-		cout << ": ";
+		cout << YELLOW_COLOR << "PhoneBook > " << END_COLOR;
 		getline(cin >> ws, input);
 		if (input.compare("SEARCH") == 0)
 			pb.searchContact();
@@ -18,7 +30,7 @@ int	main(void)
 		{
 			c.cleanFields();
 			if (c.insertContact() == true)
-				pb.addContact(c);
+				pb.addContact(&c);
 		}
 		else if (input.compare("EXIT") == 0)
 		{

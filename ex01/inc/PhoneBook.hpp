@@ -1,11 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpestana <dpestana@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/13 11:51:30 by dpestana          #+#    #+#             */
+/*   Updated: 2023/04/13 11:51:31 by dpestana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
+/*	***********************************	*/
+/*	*			INCLUDES			  *	*/
+/*	***********************************	*/
 #include "Contact.hpp"
 
-// Define
+/*	***********************************	*/
+/*	*			DEFINES				  *	*/
+/*	***********************************	*/
 #define MAX_CONTACTS 8
 
+/*	***********************************	*/
+/*	*			CLASS				  *	*/
+/*	***********************************	*/
 class PhoneBook
 {
 	private:
@@ -15,7 +35,7 @@ class PhoneBook
 		PhoneBook();
 		~PhoneBook();
 		void	inicializeQty(void);
-		void	addContact(Contact);
+		void	addContact(Contact*);
 		void	searchContact(void);
 };
 

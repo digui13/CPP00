@@ -1,30 +1,60 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpestana <dpestana@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/13 11:51:35 by dpestana          #+#    #+#             */
+/*   Updated: 2023/04/13 11:53:20 by dpestana         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/PhoneBook.hpp"
 
-// Constructor
+/*	***********************************	*/
+/*	*		CONSTRUCTORS			  *	*/
+/*	***********************************	*/
 Contact::Contact()
 {
 	cout << GREEN_COLOR << "*** Contact Created! ***" << END_COLOR << endl;
 }
 
-// Desctructor
 Contact::~Contact()
 {
 	cout << RED_COLOR << "*** Contact Destroyed! ***" << END_COLOR << endl;
 }
 
-// Method printContact
+/*	***********************************	*/
+/*	*			SETTERS				  *	*/
+/*	***********************************	*/
+void	Contact::setIndex(void)
+{
+	this->idx = 0;
+}
+
+/*	***********************************	*/
+/*	*			GETTERS				  *	*/
+/*	***********************************	*/
+int		Contact::getIndex(void)
+{
+	return (this->idx);
+}
+
+/*	***********************************	*/
+/*	*			METHODS				  *	*/
+/*	***********************************	*/
 void	Contact::printContact(void)
 {
 	cout << GREEN_COLOR << "*** Contact finded! ***" << END_COLOR << endl;
-	cout << YELLOW_COLOR << "Index: " << END_COLOR << getIndex() << endl;
-	cout << YELLOW_COLOR << "First name: " << END_COLOR << first_name << endl;
-	cout << YELLOW_COLOR << "Last name: " << END_COLOR << last_name << endl;
-	cout << YELLOW_COLOR << "Nickname: " << END_COLOR << nickname << endl;
-	cout << YELLOW_COLOR << "Phone number: " << END_COLOR << phone_number << endl;
-	cout << YELLOW_COLOR << "Darkest secret: " << END_COLOR << darkest_secret << endl;
+	cout << BLUE_COLOR << "Index: " << END_COLOR << getIndex() << endl;
+	cout << BLUE_COLOR << "First name: " << END_COLOR << first_name << endl;
+	cout << BLUE_COLOR << "Last name: " << END_COLOR << last_name << endl;
+	cout << BLUE_COLOR << "Nickname: " << END_COLOR << nickname << endl;
+	cout << BLUE_COLOR << "Phone number: " << END_COLOR << phone_number << endl;
+	cout << BLUE_COLOR << "Darkest secret: " << END_COLOR << darkest_secret << endl;
 }
 
-// Method printContacts
 void	Contact::printContacts(void)
 {
 	cout << BLUE_COLOR << "|" << END_COLOR;
@@ -43,7 +73,6 @@ void	Contact::printContacts(void)
 	cout << endl;
 }
 
-// Method insertContact
 bool	Contact::insertContact(void)
 {
 	cout << YELLOW_COLOR << "*** Inserting contact... ***" << END_COLOR << endl;
@@ -69,7 +98,6 @@ bool	Contact::insertContact(void)
 	return true;
 }
 
-// Method cleanFields
 void	Contact::cleanFields(void)
 {
 	this->first_name = "";
@@ -77,16 +105,4 @@ void	Contact::cleanFields(void)
 	this->nickname = "";
 	this->phone_number = "";
 	this->darkest_secret = "";
-}
-
-// Method setIndex
-void	Contact::setIndex(void)
-{
-	this->idx = 0;
-}
-
-// Method getIndex
-int		Contact::getIndex(void)
-{
-	return (this->idx);
 }
