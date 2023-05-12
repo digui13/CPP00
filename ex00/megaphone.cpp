@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpestana <dpestana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dpestana <dpestana@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 11:53:47 by dpestana          #+#    #+#             */
-/*   Updated: 2023/04/13 11:53:48 by dpestana         ###   ########.fr       */
+/*   Updated: 2023/05/03 03:04:52 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,17 @@ int	main(int argc, char **argv)
 				std::cout << " ";
 			while (*(*(argv + y) + x) != '\0')
 			{
-				if (97 <= *(*(argv + y) + x) && *(*(argv + y) + x) <= 122)
-					std::cout << (char)(*(*(argv + y) + x) - 32);
+				if (std::islower(*(*(argv + y) + x)) != 0)
+					std::cout << (char)std::toupper(*(*(argv + y) + x));
 				else
-					std::cout << (char)(*(*(argv + y) + x));
+					std::cout << (*(*(argv + y) + x));
+
 				x++;
 			}
 			x = 0;
 			y++;
 		}
 	}
-	std::cout << "\n";
+	std::cout << std::endl;
 	return (0);
 }
