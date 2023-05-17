@@ -6,7 +6,7 @@
 /*   By: dpestana <dpestana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 11:48:45 by dpestana          #+#    #+#             */
-/*   Updated: 2023/04/13 11:51:42 by dpestana         ###   ########.fr       */
+/*   Updated: 2023/05/12 16:41:34 by dpestana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,6 @@ void	PhoneBook::searchContact(void)
 		if (0 < search_idx && search_idx <= qty)
 			contacts[search_idx - 1].printContact();
 		else
-			cout << RED_COLOR << "*** Contact not founded! ***" << END_COLOR << endl ;
+			cout << RED_COLOR << "*** Contact not founded! ***" << END_COLOR << endl;
 	}
 }

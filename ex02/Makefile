@@ -9,6 +9,7 @@ NAME						=	account
 
 # Compiler
 Compile						=	g++ -Wall -Wextra -Werror -fsanitize=address -std=c++98
+#Compile						=	clang++ -Wall -Wextra -Werror -fsanitize=address -std=c++98
 
 # Flags for Compiler
 O_FLAG 						=	-o
